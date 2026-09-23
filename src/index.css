@@ -1,0 +1,23 @@
+/* @import "tailwindcss"; */
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#bg{
+    height: 500px;
+    width: 100%;
+    background-image: url("https://imgs.search.brave.com/roLD8w1HZEbIGN9qTRPgzEc4jFLm2XMHB-M9RBXcPco/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtcGhvdG8v/YXRvbS1iaW90ZWNo/bm9sb2d5LW51Y2xl/YXItbWVkaWNpbmUt/d2l0aC1zY2llbnRp/c3QtcnNxdW8tcy1o/YW5kcy1kaWdpdGFs/LXRyYW5zZm9ybWF0/aW9uLXJlbWl4XzUz/ODc2LTEyNjc0Ni5q/cGc_c2VtdD1haXNf/aHlicmlkJnc9NzQw/JnE9ODA");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#lbtn{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
