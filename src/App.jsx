@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Dashboard from "./pages/Dashboard";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
+import Parent from "./pages/Parent";
 import Pnf from "./pages/Pnf";
 import ProductView from "./pages/ProductView";
 import Register from "./pages/Register";
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/parent" element={<Parent />} />
                 <Route path="/product/:id" element={<ProductView />} />
                 <Route path="*" element={<Pnf />} />
             </Routes>

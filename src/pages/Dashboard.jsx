@@ -3,6 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
 
 function Dashboard() {
     let baseurl = "https://fakestoreapi.com/products";
@@ -25,36 +26,17 @@ function Dashboard() {
         getProducts();
     }, []);
 
+    const handleData=(data)=>{ {/* passing data to parents through callbacks*/}
+        console.log(data);
+        alert(data)
+        
+    }
+
     return (
         <>
             <h1>Dashboard</h1>
             <div>
-                <Row>
-                    {products.length > 0
-                        ? products.map(item => (
-                              <Col>
-                                  <Card style={{ width: "18rem", margin:"10px", padding:"10px" }}>
-                                      <Card.Img
-                                          variant="top"
-                                          height={'350px'}
-                                          src={item.image}
-                                      />
-                                      <Card.Body>
-                                          <Card.Title>{item.title}</Card.Title>
-                                          <Card.Text>
-                                              {item.price}
-                                          </Card.Text>
-                                          <Link to={`/product/${item.id}`}>
-                                          <Button variant="primary">
-                                              Buy
-                                          </Button>
-                                          </Link>
-                                      </Card.Body>
-                                  </Card>
-                              </Col>
-                        ))
-                        : "No Data"}
-                </Row>
+                <ProductCard products={products} sendData={handleData}/>
             </div>
         </>
     );
